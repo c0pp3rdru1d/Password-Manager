@@ -1,0 +1,20 @@
+[project]
+name = "password-manager"
+version = "0.1.0"
+description = "CLI password & passphrase generator with profiles"
+requires-python = ">=3.10"
+dependencies = [
+	"typer>=0.12.3,<1.0.0",
+	"pyperclip>=1.9.0,<2.0.0"
+]
+
+[project.scripts]
+pm = "pm.cli:app"
+
+
+[tool.pytest.ini_options]
+addopts = "-q"
+
+
+[tool.setuptools.package-data]
+"pm.gen.wordlists" = ["*.txt"]

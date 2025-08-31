@@ -1,5 +1,5 @@
 import secrets
-from src.utils.wordlist_loader import wordlist_loader as wordlist_loader
+from generators.wordlists import wordlist_loader as wordlist_loader
 
 def generate_passphrase(words, num_words=4, separator='-'):
     passphrase_words = [secrets.choice(words) for _ in range(num_words)]
